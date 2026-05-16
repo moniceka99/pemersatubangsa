@@ -1,0 +1,157 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#000;
+  color:white;
+}
+
+/* Navbar */
+nav{
+  position:fixed;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 60px;
+  background:rgba(0,0,0,0.7);
+  z-index:1000;
+}
+
+.logo{
+  color:red;
+  font-size:32px;
+  font-weight:700;
+}
+
+nav ul{
+  display:flex;
+  gap:30px;
+  list-style:none;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:red;
+}
+
+/* Hero */
+.hero{
+  position:relative;
+  height:100vh;
+
+  background:
+  url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1974&auto=format&fit=crop');
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  align-items:center;
+
+  padding-left:80px;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.65);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:600px;
+}
+
+.hero h1{
+  font-size:90px;
+  line-height:1;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:20px;
+  margin-bottom:30px;
+}
+
+button{
+  padding:15px 35px;
+  border:none;
+  border-radius:8px;
+  background:red;
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.05);
+  background:#ff2a2a;
+}
+
+/* Movies */
+.movies{
+  padding:80px 60px;
+}
+
+.movies h2{
+  margin-bottom:30px;
+  font-size:35px;
+}
+
+.movie-list{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.movie-card{
+  overflow:hidden;
+  border-radius:12px;
+  transition:0.3s;
+  cursor:pointer;
+}
+
+.movie-card img{
+  width:250px;
+  height:350px;
+  object-fit:cover;
+}
+
+.movie-card:hover{
+  transform:scale(1.08);
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+  nav{
+    padding:20px;
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .hero{
+    padding:30px;
+  }
+
+  .hero h1{
+    font-size:55px;
+  }
+
+  .movie-list{
+    justify-content:center;
+  }
+
+}
